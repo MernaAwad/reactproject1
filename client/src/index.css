@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --color-primary:#124076;
+    --color-secondary:#51829B;
+    --bg-color:#f1ffd1;
+    --color-btn1:#9BB0C1;
+    --color-btn2:#9bb7c1;
+    --btn-danger:#FE0000;
+    --color-white:#FBF9F1;
+    --transition:all 300ms ease;
+    --container-width-lg:84%;
+    --container-width-sm:92%;
+    --from-width:50%;
+    --raduis-1:0.3rem;
+    --raduis-2:0.6;
+    --raduis-3:1rem;
+    --raduis-4:2rem;
+  }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    border:0;
+    outline:0;
+}
+body{
+    width:100%;
+    font-size:1.1rem;
+    line-height:1.6;
+    color:var(--color-primary);
+    font-weight:350;
+    background-color:var(--bg-color)
+}
+a{
+    text-decoration:none;
+}
+ul{
+    list-style:none;
+}
+h1,h2,h3,h4,h5,h6{
+    line-height:1.1;
+    font-weight:bold;
+    color:var(--color-primary)
+}
+h1{
+    font-size:2.2rem;
+}
+h2{
+    font-size:1.9rem;
+}
+h3{
+    font-size:1.3rem;
+    line-height:1.25;
+}
+h4{
+    font-size:1.1rem;
+}
+h5{
+    line-height:1.4;
+}
+
+section{
+    margin-top:2rem;
+    padding-top:2rem;
+}
+.mybtn{
+display:inline-block;
+width:fit-content;
+padding:0.5rem 1rem;
+border-radius:var(--raduis-2);
+background-color:var(--color-btn1);
+font-weight:500;
+cursor:pointer;
+transition:var(--transition)
+}
+.mybtn:hover{
+ background-color:var(--color-btn2);
+}
+.btn-danger{
+background-color: var(--btn-danger);
+color:var(--color-white)
+}
+
+/*################## NavBar################## */
+.nav{
+    background-color:#F6995C;
+    /* -webkit-backdrop-filter: blur(10px);
+     backdrop-filter: blur(10px); */
+    width:100%;
+    color:#FEECE2;
+    border-bottom:4px solid #db8753;
+    /* backdrop-filter: blur(50%); */
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 1;
+    /* margin-bottom: 200px; */
+}
+.logo-img{
+    width:3rem;
+}
+
+
+/*################## Footer ################## */
+.footer{
+    /* position:fixed; */
+    bottom:0;
+    left:0;
+    background-color: #155e75;
+    
+}
+/*################## ErrorPage ################## */
+.my-container{
+    width:100%;
+    height:100vh
+}
+.post{
+    border: 2px solid #155e75;
+    padding: 10px;
+}
+.post__author{
+    display: flex;
+}
+.posts__container{
+    padding-top:50px;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 4rem;
+    /* border: 2px solid: */
+}
+/*################## RegisterPage ################## */
+input,select,textarea {
+    width:100%;
+    padding:0.6rem 1rem;
+    resize:none;
+
+}
+.register__form{
+    border:2px solid #155e75 ;
+    padding: 10px;
+}
+.register, .login, .createPost{
+    padding-top:5rem;
+    width:50%;
+    margin-inline:auto;
+    height: calc(100vh-12rem);
+    display:grid;
+    place-items:center;
+}
+
+.register h2, .login h2, .createPost h2 {
+    margin-bottom:2rem;
+}
+.register small a, .login small a{
+    color: var(--color-secondary);
+    font-size:1.1rem;
+}
+
+/*################## Users Page ################## */
+.users{
+     border:2px solid grey;
+     transition: var(--transition)
+}
+.users:hover{
+    box-shadow:0 1rem 1.5rem rgba(0,0,0,0.7)
+}
+.user__img img{
+    width:5rem;
+    aspect-ratio:1/1;
+    border: 0.3rem solid var(--bg-color);
+    overflow:hidden;
+    border-radius:50%;
+}
+
+/*################## User Profile Page ################## */
+.profile{
+    width:50%;
+}
+.profile__wrapper{
+    width:15rem;
+    aspect-ratio:1/1;
+    position:relative;
+    margin-inline:auto;
+    margin-top:1rem;
+}
+.profile__img img{
+    width:100%;
+    border-radius:45%;
+    border:0.5rem solid var(--color-white);
+    overflow:hidden;
+}
+.form__img{
+    height:1rem;
+}
+/* .form__img input{
+    visibility: hidden;
+} */
+.form__img label, .profile__img-btn{
+    background-color: var(--color--gray-900);
+    color: var(--color-white);
+    font-size:1.5rem;
+    position:absolute;
+    right:2rem;
+    bottom:4rem;
+    width:3rem;
+    height:3rem;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    border:none;
+}
+.profile__img-btn{
+    cursor:pointer;
+    padding:0;
+    font-size:2rem;
+    background: var(--color-primary)
+}
+.profile__details h1{
+    margin-top:1.5rem;
+}
+.create_post{
+    padding-top: 100px;
+    width: 50%;
+    margin: auto;
+}
